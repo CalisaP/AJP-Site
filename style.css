@@ -1,6 +1,60 @@
 body{
+    margin: 0;
     font: normal 16px Arial, Helvetica, san-serif;
+    color: #251b13;
 }
+
+header{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: #f5e0c0;
+   
+}
+.header-container{
+    /* Limits width for large screens */
+    width: 960px;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+
+    display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#logo{ 
+    /* responsive sizing */
+    max-width: 100%;
+    height: auto;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+    text-align: center;
+
+}
+nav ul li{
+    display: inline;
+}
+nav ul li:hover{
+    text-shadow: 2px 2px 1px #f5e0c0;
+}
+nav ul li:active{
+    text-shadow: 2px 2px 3px #760a04;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: #251b13;
+    display: inline-block;
+	padding: .5em 1.5em;
+    font-size: 25px;
+}
+
+
 .container{
     display: grid;
     grid-template-columns: 1fr;
@@ -10,65 +64,6 @@ body{
     "portfolio-area"
     "contact-area"
     "footer";
-}
-
-header{
-    top: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-areas: "logo nav";
-    column-gap: .5rem;
-    position: fixed;
-    z-index: 10;
-    background-color: #f5e0c0;
-}
-#logo{
-    grid-area: logo;
-    height: 100px;
-}
-nav{
-    grid-area: nav;
-
-    display: grid;
-    place-items: end start;
-}
-nav ul{
-    list-style: none;
-    width: 100%;
-    padding: 0;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "home portfolio news contact";
-}
-nav ul li{
-    display: inline-block;
-}
-nav ul li:hover{
-    text-shadow: 2px 2px 1px #fff;
-}
-nav ul li:active{
-   text-shadow: 2px 2px 3px #760a04;
-
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #000;
-}
-nav ul #home{
-    grid-area: home;
-    padding-left: 15px;
-}
-nav ul #portfolio{
-    grid-area: portfolio;
-}
-nav ul #news{
-    grid-area: news;
-}
-nav ul #contact-us{
-    grid-area: contact
 }
 
 .anchor{ /* addresses offset caused by fixed header placement */

@@ -3,6 +3,13 @@ body{
 }
 .container{
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "banner-area"
+    "news-area"
+    "portfolio-area"
+    "contact-area"
+    "footer";
 }
 
 header{
@@ -14,7 +21,7 @@ header{
     column-gap: .5rem;
     position: fixed;
     z-index: 10;
-    background-color: #fdfdfd;
+    background-color: #f5e0c0;
 }
 #logo{
     grid-area: logo;
@@ -38,6 +45,18 @@ nav ul{
 nav ul li{
     display: inline-block;
 }
+nav ul li:hover{
+    text-shadow: 2px 2px 1px #fff;
+}
+nav ul li:active{
+   text-shadow: 2px 2px 3px #760a04;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
 nav ul #home{
     grid-area: home;
     padding-left: 15px;
@@ -52,6 +71,32 @@ nav ul #contact-us{
     grid-area: contact
 }
 
+.anchor{ /* addresses offset caused by fixed header placement */
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+
 main{
     margin-top: 50px;
+}
+
+#banner-section{
+    grid-area: banner-area;
+}
+
+#news-section{
+    grid-area: news-area;
+}
+
+#featured-portfolio{
+    grid-area: portfolio-area;
+}
+
+#contact-section{
+    grid-area: contact-area;
+}
+
+footer{
+    grid-area: footer;
 }

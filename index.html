@@ -15,21 +15,30 @@
             </figure>
             <nav>
                 <ul>
-                    <li id="home">Home</li>
-                    <li id="portfolio">Portfolio</li>
-                    <li id="news">News</li>
-                    <li id="contact-us">Contact Us</li>
+                    <li id="home">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li id="portfolio">
+                        <a href="#portfolio-anchor">Portfolio</a>
+                    </li>
+                    <li id="news">
+                        <a href="#news-anchor">News</a>
+                    </li>
+                    <li id="contact-us">
+                        <a href="#contact-area">Contact Us
+                        </a>
+                        </li>
                 </ul>
             </nav>
         </header>
         <main>
             <section id="banner-section">
-                <figure id="banner-image">
+                <a class="anchor" id="banner-anchor"></a> <!-- To address offset from fixed header-->                <figure id="banner-image">
                     <img src="images/homepage/bw-logo-header.jpeg"/>
                 </figure>
             </section>
             <section id="news-section">
-                <h2>What's New With AJP?</h2>
+                <a class="anchor" id="news-anchor"></a> <!-- To address offset from fixed header-->                <h2>What's New With AJP?</h2>
                 <figure>
                     <img src="images/news/Acting Class.png"/>
                     <figcaption>So You Want to Act 2</figcaption>
@@ -51,6 +60,7 @@
                 </ul>
             </section>
             <section id="featured-portfolio">
+                <a class="anchor" id="portfolio-anchor"></a> <!-- To address offset from fixed header-->
                 <h2>Portfolio</h2>
                 <figure>
                     <img src="images/portfolio/i am_Merikin.jpeg"/>
@@ -67,6 +77,7 @@
                 <p>See more</p>
             </section>
             <section id="contact-section">
+                <a class="anchor" id="contact-anchor"></a> <!-- To address offset from fixed header-->
                 <h2>Get in Touch</h2>
                 <p>For bookings or for more information, feel free to reach out to us at:</p>
                 <figure id="email-icon">

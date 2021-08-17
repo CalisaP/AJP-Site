@@ -10,29 +10,38 @@ header{
     width: 100%;
     position: fixed;
     z-index: 10;
-    background: url('images/backgrounds/geometric-leaves-gold-transparent75.png') center;
+    background: url('images/backgrounds/dark\ curtain.jpg') center fixed;
+    background-size: contain; 
+    filter:drop-shadow(2px 5px 2px #251b13d0);
 }
+
 .header-container{
     /* Limits width for large screens */
     width: 960px;
     max-width: 100%;
     padding: 10px;
     margin: 0 auto;
-
+    /* Flexbox layout */
     display: flex;
 	align-items: flex-end;
 	justify-content: space-around;
 	flex-wrap: wrap;
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */
 }
-#logo{ 
+.header-container #logo{ 
     /* responsive sizing */
     max-width: 100%;
     height: auto;
 
-    filter:drop-shadow(2px 2px 2px #251b13e1);
+    filter: drop-shadow(5px 5px 2px #251b13);
+    /* For the zoom effect */
+    transition: transform .5s ease;
 }
-#logo:hover{
-    filter:drop-shadow(3px 3px 2px #251b13e1)
+.header-container #logo:hover{
+    /* For the zoom effect */
+    transform: scale(1.1);
 }
 nav ul{
     list-style: none;
@@ -44,16 +53,16 @@ nav ul li{
     display: inline;
 }
 nav ul li:hover{
-    text-shadow: 2px 2px 1px #251b1381;}
+    text-shadow: 3px 2px 1px #f5e0c0a8;
+}
 nav ul li:active{
-    text-shadow: 2px 2px 1px #b5822ab0;
-    color: #b5822a;
+    text-shadow: 4px 4px 1px #b5822a;
 }
 nav ul li a{
     text-decoration: none;
-    color: #760a04;
+    color: #f5e0c0;
     display: inline-block;
-	padding: .5em 1.5em;
+	padding: .5em 1em;
     font-size: 25px;
 }
 
@@ -62,14 +71,14 @@ nav ul li a{
     grid: 
     [news-start] "news-area" auto [news-end]
     [portfolio-start] "portfolio-area" auto [portfolio-end]
-    [contact-start] "contact-area" auto [contact-end]
-    [footer-start] "footer" auto [footer-end] / 1fr;
+    [contact-start] "contact-area" auto [contact-end] / 1fr;
     place-items: center;
+    margin: 2rem;
 }
 
 .anchor{ /* addresses offset caused by fixed header placement */
     position: relative;
-    top: -170px;
+    top: -160px;
     visibility: hidden;
 }
 
@@ -81,7 +90,7 @@ main{
     #banner-section{
         background: url('images/backgrounds/dark\ curtain.jpg') center;
         background-size: contain;
-        padding: 12rem 2rem;
+        padding: 10rem 2rem;
     }
 }
 @media (max-width: 910px) {
@@ -96,7 +105,7 @@ main{
     #banner-section{
         background: url('images/backgrounds/dark\ curtain.jpg') center;
         background-size: contain;
-        padding: 12rem 2rem;
+        padding: 9rem 2rem;
     }
 }
 @media (max-width: 657px) {
@@ -111,7 +120,10 @@ main{
     #banner-section{
         background: url('images/backgrounds/dark\ curtain.jpg') ;
         background-size: cover;
-        padding: 8rem 2rem;
+        padding: 5rem 2rem;
+    }
+    nav ul li a{
+        font-size: 23px;
     }
 }
 
@@ -128,18 +140,38 @@ figcaption{
     display: flex;
     flex-flow: row;
     justify-content: center;
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */
 }
-#banner-section h2{
-    color: white;
+#banner-section img{
+    filter:drop-shadow(5px 5px 2px #251b13);
+
+    /* For the zoom effect */
+    transform-origin: 50% 50%; /* This is the default setting to allow for straight zooming */
+    transition: transform 5s, filter 3s ease-in-out;
+}
+#banner-section img:hover{
+    /* for the zoom effect */
+    transform: scale(1.5);
 }
 
 #news-section{
     grid-area: news-area;
+
+    border-radius: 15px;
+    background-color: #f5e0c080;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 1.5rem 0;
 }
 #news-section img{
     /* responsive sizing */
     max-width: 100%;
     height: auto;
+
+    border-radius: 5px;
+    filter:drop-shadow(5px 5px 2px #251b13ad);
+
 }
 #news-section #news-columns{
     display: grid;
@@ -147,14 +179,62 @@ figcaption{
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
     gap: 1rem;
     place-items: center;
+
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */
+}
+#news-section h3{
+    text-align: center;
 }
 #news-columns #news-text{
     /*grid-area: news-text;*/
-    padding: 1rem;
+    padding-right: 1rem;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
+#news-columns #news-text ul{
+    align-self: flex-start;
+}
+#news-columns #news-text .button{
+    background-color: #f7bf25;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    max-width: 25%;
+    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* For the zoom effect */
+    transition: transform .5s ease;
+}
+#news-columns #news-text .button:hover{
+    /* For the zoom effect */
+    transform: scale(1.05);
+}
+#news-columns #news-text .button:active{
+    border: 2px white solid;
+}
+#news-columns #news-text figcaption{
+    text-align: left;
+}
+
 
 #featured-portfolio{
     grid-area: portfolio-area;
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */
+    
+    margin: 2rem 0;
+    padding: 2rem 0;
 }
 #featured-portfolio #portfolio-images{
     display: grid;
@@ -166,13 +246,26 @@ figcaption{
     /* responsive sizing */
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
+    /* for the zoom effect */
+    transition: transform .5s, filter 1.5s ease-in-out;
+    filter:grayscale(100%) drop-shadow(5px 5px 2px #251b13ad);
+
 }
 #featured-portfolio img:hover{
-    filter:drop-shadow(1px 2px 2px #251b13e1)
+    /* for the zoom effect */
+    filter: grayscale(0) drop-shadow(5px 5px 2px #251b13e1);
+    transform: scale(1.05);
 }
 
 #contact-section{
-    grid-area: contact-area;    
+    grid-area: contact-area;
+
+    padding: 2rem 0;
+    
+    border-radius: 15px;
+    background-color: #f5e0c080;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 #contact-section p{
     padding: 1rem;
@@ -182,6 +275,9 @@ figcaption{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */
 }
 #contacts figure{
     display: flex;
@@ -189,8 +285,14 @@ figcaption{
     justify-content: center;
     align-items: center;
 }
+#contacts img{
+    filter:drop-shadow(3px 3px 2px #251b13e1);
+    /* For the zoom effect */
+    transition: transform .5s ease;
+}
 #contacts img:hover{
-    filter:drop-shadow(1px 2px 2px #251b13e1)
+    /* for the zoom effect */
+    transform: scale(1.1);
 }
 #contacts a{
     color: #251b13;
@@ -205,3 +307,4 @@ footer{
     align-items: center;
     padding: 3rem 1rem 0 0;
 }
+/* Fancy zooming courtesy Rahul Arora @ https://w3bits.com/css-image-hover-zoom/ */

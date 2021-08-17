@@ -2,7 +2,7 @@ body{
     margin: 0;
     font: normal 16px Verdana, Helvetica, san-serif;
     color: #251b13;
-    background: url('images/backgrounds/geometric-leaves.png') center;
+    background: url('images/backgrounds/geometric-leaves-gold-transparent75.png') center;
 }
 
 header{
@@ -10,7 +10,7 @@ header{
     width: 100%;
     position: fixed;
     z-index: 10;
-    background: url('images/backgrounds/geometric-leaves.png') center;
+    background: url('images/backgrounds/geometric-leaves-gold-transparent75.png') center;
 }
 .header-container{
     /* Limits width for large screens */
@@ -77,6 +77,13 @@ main{
     margin-top: 150px;
 }
 
+@media (max-width: 2000px) {
+    #banner-section{
+        background: url('images/backgrounds/dark\ curtain.jpg') center;
+        background-size: contain;
+        padding: 12rem 2rem;
+    }
+}
 @media (max-width: 910px) {
     main{
         margin-top: 240px;
@@ -85,6 +92,11 @@ main{
         position: relative;
         top: -240px;
         visibility: hidden;
+    }
+    #banner-section{
+        background: url('images/backgrounds/dark\ curtain.jpg') center;
+        background-size: contain;
+        padding: 12rem 2rem;
     }
 }
 @media (max-width: 657px) {
@@ -95,6 +107,11 @@ main{
         position: relative;
         top: -290px;
         visibility: hidden;
+    }
+    #banner-section{
+        background: url('images/backgrounds/dark\ curtain.jpg') ;
+        background-size: cover;
+        padding: 8rem 2rem;
     }
 }
 
@@ -108,10 +125,6 @@ figcaption{
 }
 
 #banner-section{
-    background: url('images/backgrounds/dark\ curtain.jpg') center;
-    background-size: contain;
-    padding: 8rem 2rem;
-
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -175,8 +188,6 @@ figcaption{
     flex-flow: column;
     justify-content: center;
     align-items: center;
-}
-#contacts img{
 }
 #contacts img:hover{
     filter:drop-shadow(1px 2px 2px #251b13e1)

@@ -1,7 +1,14 @@
 body{
     margin: 0;
-    font: normal 16px Arial, Helvetica, san-serif;
+    font: normal 16px Verdana, Helvetica, san-serif;
     color: #251b13;
+    background: url('images/backgrounds/geometric-leaves.png') center;
+    /*
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    place-content: center;
+    */
 }
 
 header{
@@ -9,8 +16,7 @@ header{
     width: 100%;
     position: fixed;
     z-index: 10;
-    background-color: #f5e0c0;
-   
+    background: url('images/backgrounds/geometric-leaves.png') center;
 }
 .header-container{
     /* Limits width for large screens */
@@ -28,70 +34,183 @@ header{
     /* responsive sizing */
     max-width: 100%;
     height: auto;
+
+    filter:drop-shadow(2px 2px 2px #251b13e1);
+}
+#logo:hover{
+    filter:drop-shadow(3px 3px 2px #251b13e1)
 }
 nav ul{
     list-style: none;
     padding: 0;
     margin-top: 1em;
     text-align: center;
-
 }
 nav ul li{
     display: inline;
 }
 nav ul li:hover{
-    text-shadow: 2px 2px 1px #f5e0c0;
-}
+    text-shadow: 2px 2px 1px #251b1381;}
 nav ul li:active{
-    text-shadow: 2px 2px 3px #760a04;
-
+    text-shadow: 2px 2px 1px #b5822ab0;
+    color: #b5822a;
 }
 nav ul li a{
     text-decoration: none;
-    color: #251b13;
+    color: #760a04;
     display: inline-block;
 	padding: .5em 1.5em;
     font-size: 25px;
 }
 
-
 .container{
     display: grid;
-    grid-template-columns: 1fr;
+    /*
     grid-template-areas: 
     "banner-area"
     "news-area"
     "portfolio-area"
     "contact-area"
     "footer";
+    */
+    
+    grid: 
+    /*[banner-start] "banner-area" auto [banner-end]*/
+    [news-start] "news-area" auto [news-end]
+    [portfolio-start] "portfolio-area" auto [portfolio-end]
+    [contact-start] "contact-area" auto [contact-end]
+    [footer-start] "footer" auto [footer-end] / 1fr;
+    
+    place-items: center;
+    
 }
 
 .anchor{ /* addresses offset caused by fixed header placement */
     position: relative;
-    top: -150px;
+    top: -170px;
     visibility: hidden;
 }
 
 main{
-    margin-top: 50px;
+    margin-top: 150px;
+}
+
+@media (max-width: 910px) {
+    main{
+        margin-top: 240px;
+    }
+    .anchor{ /* addresses offset caused by fixed header placement */
+        position: relative;
+        top: -240px;
+        visibility: hidden;
+    }
+}
+@media (max-width: 657px) {
+    main{
+        margin-top: 290px;
+    }
+    .anchor{ /* addresses offset caused by fixed header placement */
+        position: relative;
+        top: -290px;
+        visibility: hidden;
+    }
+}
+
+h2{
+    text-align: center;
+    color: #760a04;
+}
+
+figcaption{
+    text-align: center;
 }
 
 #banner-section{
-    grid-area: banner-area;
+    /*grid-area: banner-area;*/
+    background: url('images/backgrounds/dark\ curtain.jpg') center;
+    background-size: contain;
+    padding: 8rem 2rem;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+}
+#banner-section h2{
+    color: white;
 }
 
 #news-section{
     grid-area: news-area;
 }
+#news-section img{
+    /* responsive sizing */
+    max-width: 100%;
+    height: auto;
+}
+#news-section #news-columns{
+    display: grid;
+    /* allows columns to wrap */
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    gap: 1rem;
+    place-items: center;
+}
+#news-columns #news-text{
+    /*grid-area: news-text;*/
+    padding: 1rem;
+}
 
 #featured-portfolio{
     grid-area: portfolio-area;
 }
+#featured-portfolio #portfolio-images{
+    display: grid;
+    /* allows columns to wrap */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    place-items: end center;
+}
+#featured-portfolio img{
+    /* responsive sizing */
+    max-width: 100%;
+    height: auto;
+}
+#featured-portfolio img:hover{
+    filter:drop-shadow(1px 2px 2px #251b13e1)
+}
 
 #contact-section{
-    grid-area: contact-area;
+    grid-area: contact-area;    
+}
+#contact-section p{
+    padding: 1rem;
+}
+#contact-section #contacts{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+#contacts figure{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#contacts img{
+}
+#contacts img:hover{
+    filter:drop-shadow(1px 2px 2px #251b13e1)
+}
+#contacts a{
+    color: #251b13;
 }
 
 footer{
     grid-area: footer;
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem 1rem 0 0;
 }

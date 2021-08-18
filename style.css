@@ -3,11 +3,12 @@ html {
   }
 body{
     margin: 0;
-    font: normal 16px Verdana, Helvetica, san-serif;
+    font: normal 16px Verdana, Geneva, Tahoma, sans-serif;
     color: #251b13;
-    background: url('images/backgrounds/geometric-leaves-gold-transparent75.png') center;
+    background: url('images/backgrounds/geometric-leaves-gold-transparent75.png') center fixed;
 }
 
+/* Header Section */
 header{
     top: 0;
     width: 100%;
@@ -16,7 +17,6 @@ header{
     filter:drop-shadow(2px 5px 2px #251b13d0);
     background: url('images/backgrounds/dark\ curtain.jpg') center fixed;
 }
-
 .header-container{
     /* Limits width for large screens */
     width: 960px;
@@ -43,7 +43,11 @@ header{
 }
 .header-container #logo:hover{
     /* For the zoom effect */
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+.header-container #logo:active{
+    transform: translateY(1px);
+    transform: translateY(1px);
 }
 nav ul{
     list-style: none;
@@ -58,7 +62,7 @@ nav ul li:hover{
     text-shadow: 3px 2px 1px #f5e0c0a8;
 }
 nav ul li:active{
-    text-shadow: 4px 4px 1px #b5822a;
+    text-shadow: 2px 2px 1px #f5e0c0a8;
 }
 nav ul li a{
     text-decoration: none;
@@ -88,17 +92,52 @@ main{
     margin-top: 80px;
 }
 
-
-
 h2{
     text-align: center;
     color: #760a04;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; 
 }
 
 figcaption{
     text-align: center;
 }
 
+.button{
+    /*background-color: #b5822a;*/
+    background: linear-gradient(180deg,#dc8 0%,#f5bf25 49%,#b5822a 51%,#f5bf25 100%); 
+    background-size: cover;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 15px 32px;
+    cursor: pointer;
+    border: 1px solid #ba6;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,1),2px 3px 3px rgba(0,0,0,0.3);    
+    /* For the zoom effect */
+    transition: transform .5s ease;
+}
+.button:hover{
+    /* For the zoom effect */
+    transform: scale(1.03);
+}
+.button:active{
+    transform: translateY(2px);
+    transform: translateY(2px);
+}
+.button-placement{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+/* Banner Section */
 #banner-section{
     display: flex;
     flex-flow: column;
@@ -130,9 +169,9 @@ figcaption{
     transform: scale(1.1);
 }
 
+/* News Section */
 #news-section{
     grid-area: news-area;
-
     border-radius: 15px;
     background-color: #f5e0c080;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -170,42 +209,18 @@ figcaption{
 #news-columns #news-text ul{
     align-self: flex-start;
 }
-#news-columns #news-text .button{
-    background-color: #f7bf25;
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    max-width: 25%;
-    
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    /* For the zoom effect */
-    transition: transform .5s ease;
-}
-#news-columns #news-text .button:hover{
-    /* For the zoom effect */
-    transform: scale(1.05);
-}
-#news-columns #news-text .button:active{
-    border: 2px white solid;
-}
 #news-columns #news-text figcaption{
     text-align: left;
 }
 
-
+/* Portfolio Section */
 #featured-portfolio{
     grid-area: portfolio-area;
     /* for the zoom effect */
     height: auto; 
     overflow: hidden; /* Hides any overflow of child elements */
     
-    margin: 2rem 0;
+    margin: 3rem 0;
     padding: 2rem 0;
     
 }
@@ -231,6 +246,7 @@ figcaption{
     transform: scale(1.05);
 }
 
+/* Contact Section */
 #contact-section{
     grid-area: contact-area;
 
@@ -265,12 +281,17 @@ figcaption{
 }
 #contacts img:hover{
     /* for the zoom effect */
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+#contacts img:active{
+    transform: translateY(2px);
+    transform: translateY(2px);
 }
 #contacts a{
     color: #251b13;
 }
 
+/* Footer Section */
 footer{
     grid-area: footer;
     
@@ -330,4 +351,4 @@ footer{
 }
 
 /* Fancy zooming courtesy Rahul Arora @ https://w3bits.com/css-image-hover-zoom/ */
-
+/* Fancy button styling courtesy Yuhomyan @ https://codepen.io/yuhomyan/pen/jOqvjZq */

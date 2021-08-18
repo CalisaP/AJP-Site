@@ -172,10 +172,16 @@ figcaption{
 /* News Section */
 #news-section{
     grid-area: news-area;
-    border-radius: 15px;
     background-color: #f5e0c080;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     padding: 1.5rem 0;
+
+    border: double 4px transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(#f5e0c080, #f5e0c080), radial-gradient(circle at top left, #f7bf25,#b5822a);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
 }
 #news-section img{
     /* responsive sizing */
@@ -209,8 +215,8 @@ figcaption{
 #news-columns #news-text ul{
     align-self: flex-start;
 }
-#news-columns #news-text figcaption{
-    text-align: left;
+#news-section .button{
+    margin-bottom: 2rem;
 }
 
 /* Portfolio Section */
@@ -222,6 +228,11 @@ figcaption{
     
     margin: 3rem 0;
     padding: 2rem 0;
+
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right bottom, #f7bf25, #b5822a);
+    border-image-slice: 1;
     
 }
 #featured-portfolio #portfolio-images{
@@ -252,9 +263,14 @@ figcaption{
 
     padding: 2rem 0;
     
-    border-radius: 15px;
     background-color: #f5e0c080;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+    border: double 4px transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(#f5e0c080, #f5e0c080), radial-gradient(circle at top left, #f7bf25,#b5822a);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 #contact-section p{
     padding: 1rem;
@@ -350,5 +366,6 @@ footer{
     }
 }
 
-/* Fancy zooming courtesy Rahul Arora @ https://w3bits.com/css-image-hover-zoom/ */
-/* Fancy button styling courtesy Yuhomyan @ https://codepen.io/yuhomyan/pen/jOqvjZq */
+/* Fancy zooming based on Rahul Arora @ https://w3bits.com/css-image-hover-zoom/ */
+/* Fancy button styling based on Yuhomyan @ https://codepen.io/yuhomyan/pen/jOqvjZq */
+/* Fancy borders based on Tasi @ https://www.codegrepper.com/code-examples/css/css+gold+border and sterokai @ https://gist.github.com/stereokai/36dc0095b9d24ce93b045e2ddc60d7a0 */

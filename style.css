@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 body{
     margin: 0;
     font: normal 16px Verdana, Helvetica, san-serif;
@@ -78,19 +81,18 @@ nav ul li a{
 
 .anchor{ /* addresses offset caused by fixed header placement */
     position: relative;
-    top: -160px;
+    top: -190px;
     visibility: hidden;
 }
 
 main{
-    margin-top: 150px;
+    margin-top: 80px;
 }
 
 @media (max-width: 2000px) {
     #banner-section{
         background: url('images/backgrounds/dark\ curtain.jpg') center;
         background-size: contain;
-        padding: 10rem 2rem;
     }
 }
 @media (max-width: 910px) {
@@ -105,7 +107,6 @@ main{
     #banner-section{
         background: url('images/backgrounds/dark\ curtain.jpg') center;
         background-size: contain;
-        padding: 9rem 2rem;
     }
 }
 @media (max-width: 657px) {
@@ -120,7 +121,6 @@ main{
     #banner-section{
         background: url('images/backgrounds/dark\ curtain.jpg') ;
         background-size: cover;
-        padding: 5rem 2rem;
     }
     nav ul li a{
         font-size: 23px;
@@ -138,22 +138,31 @@ figcaption{
 
 #banner-section{
     display: flex;
-    flex-flow: row;
-    justify-content: center;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
     /* for the zoom effect */
-    height: auto; 
+    height: 100vh; 
     overflow: hidden; /* Hides any overflow of child elements */
 }
-#banner-section img{
+#banner-section #banner-img{
     filter:drop-shadow(5px 5px 2px #251b13);
 
     /* For the zoom effect */
-    transform-origin: 50% 50%; /* This is the default setting to allow for straight zooming */
+    transform-origin: 50% -5%; /* This is the default setting to allow for straight zooming */
     transition: transform 5s, filter 3s ease-in-out;
 }
-#banner-section img:hover{
+#banner-section #banner-img:hover{
     /* for the zoom effect */
     transform: scale(1.5);
+}
+#banner-section #scroll-img{
+    /* For the zoom effect */
+    transition: transform .5s ease;
+}
+#banner-section #scroll-img:hover{
+    /* For the zoom effect */
+    transform: scale(1.1);
 }
 
 #news-section{
@@ -235,6 +244,7 @@ figcaption{
     
     margin: 2rem 0;
     padding: 2rem 0;
+    
 }
 #featured-portfolio #portfolio-images{
     display: grid;

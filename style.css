@@ -13,9 +13,8 @@ header{
     width: 100%;
     position: fixed;
     z-index: 10;
-    background: url('images/backgrounds/dark\ curtain.jpg') center fixed;
-    background-size: contain; 
     filter:drop-shadow(2px 5px 2px #251b13d0);
+    background: url('images/backgrounds/dark\ curtain.jpg') center fixed;
 }
 
 .header-container{
@@ -89,43 +88,7 @@ main{
     margin-top: 80px;
 }
 
-@media (max-width: 2000px) {
-    #banner-section{
-        background: url('images/backgrounds/dark\ curtain.jpg') center;
-        background-size: contain;
-    }
-}
-@media (max-width: 910px) {
-    main{
-        margin-top: 240px;
-    }
-    .anchor{ /* addresses offset caused by fixed header placement */
-        position: relative;
-        top: -240px;
-        visibility: hidden;
-    }
-    #banner-section{
-        background: url('images/backgrounds/dark\ curtain.jpg') center;
-        background-size: contain;
-    }
-}
-@media (max-width: 657px) {
-    main{
-        margin-top: 290px;
-    }
-    .anchor{ /* addresses offset caused by fixed header placement */
-        position: relative;
-        top: -290px;
-        visibility: hidden;
-    }
-    #banner-section{
-        background: url('images/backgrounds/dark\ curtain.jpg') ;
-        background-size: cover;
-    }
-    nav ul li a{
-        font-size: 23px;
-    }
-}
+
 
 h2{
     text-align: center;
@@ -144,6 +107,8 @@ figcaption{
     /* for the zoom effect */
     height: 100vh; 
     overflow: hidden; /* Hides any overflow of child elements */
+
+    background: url('images/backgrounds/dark\ curtain.jpg') center;
 }
 #banner-section #banner-img{
     filter:drop-shadow(5px 5px 2px #251b13);
@@ -186,7 +151,6 @@ figcaption{
     display: grid;
     /* allows columns to wrap */
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-    gap: 1rem;
     place-items: center;
 
     /* for the zoom effect */
@@ -197,8 +161,7 @@ figcaption{
     text-align: center;
 }
 #news-columns #news-text{
-    /*grid-area: news-text;*/
-    padding-right: 1rem;
+    padding: 0 2rem;
 
     display: flex;
     flex-flow: column;
@@ -317,4 +280,54 @@ footer{
     align-items: center;
     padding: 3rem 1rem 0 0;
 }
+
+/* Responsive Design */
+@media (max-width: 2000px) {
+    header{
+        background-size: contain; 
+    }    
+    #banner-section{
+        background-size: contain;
+    }
+}
+@media (max-width: 910px) {
+    .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
+        top: -210px;
+    }
+}
+@media (max-width: 900px) {
+    .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
+        top: -210px;
+    }
+    #banner-section{
+        background-size: cover;
+    }
+    nav ul li a{
+        font-size: 23px;
+    }
+}
+@media (max-width: 780px) {
+    main{
+        margin-top: 80px;
+    }
+    .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
+        top: -280px;
+    }
+    header{
+        background-size: cover;
+    } 
+    nav ul li a{
+        font-size: 23px;
+    }
+}
+@media (max-width: 550px) {
+    nav ul li a{
+        font-size: 20px;
+    }
+    #banner-section{
+        background-size: cover;
+    }
+}
+
 /* Fancy zooming courtesy Rahul Arora @ https://w3bits.com/css-image-hover-zoom/ */
+

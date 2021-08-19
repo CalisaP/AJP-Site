@@ -84,7 +84,7 @@ nav ul li a{
 
 .anchor{ /* addresses offset caused by fixed header placement */
     position: relative;
-    top: -190px;
+    top: -210px;
     visibility: hidden;
 }
 
@@ -158,7 +158,7 @@ figcaption{
 }
 #banner-section #banner-img:hover{
     /* for the zoom effect */
-    transform: scale(1.5);
+    transform: scale(1.45);
 }
 #banner-section #scroll-img{
     /* For the zoom effect */

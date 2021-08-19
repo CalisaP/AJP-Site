@@ -5,7 +5,7 @@ body{
     margin: 0;
     font: normal 16px Verdana, Geneva, Tahoma, sans-serif;
     color: #251b13;
-    background: url('images/backgrounds/machete-background1-25.png') center fixed;
+    background: url('images/backgrounds/leaves\ gold-25.png') center fixed;
 }
 
 /* Header Section */
@@ -363,6 +363,26 @@ footer{
     }
     #banner-section{
         background-size: cover;
+    }
+}
+@media (max-width: 400px) {
+    main{
+        margin-top: 130px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;    
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #banner-section{
+        background-size: cover;
+        width: 100vw;
+    }
+    #banner-section #banner-img:hover{
+        /* for the zoom effect */
+        transform: scale(1.3);
     }
 }
 

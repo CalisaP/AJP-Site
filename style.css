@@ -92,7 +92,7 @@ nav ul li a{
 #about{
     grid:
     [about-start] "about-us" auto [about-end]
-    [director-start] "director" auto [director-end] / .8fr;
+    [director-start] "director" auto [director-end] / .80fr;
 }
 
 .anchor{ /* addresses offset caused by fixed header placement */
@@ -158,7 +158,7 @@ figcaption{
     justify-content: center;
     margin: 1rem 0;
 }
-#about-us .button, #news-section .button{
+.about-us .button, #news-section .button{
     margin-bottom: 2rem;
 }
 
@@ -215,7 +215,7 @@ figcaption{
 }
 
 /* About Us Section */
-#about-us{
+.about-us{
     grid-area: about-us;
 
     display: flex;
@@ -224,8 +224,12 @@ figcaption{
 
     margin: 0 0 3rem 0;
 }
-#about-us p{
-    padding: 1rem;
+.about-us h2{
+    font-size: 30px;
+    text-shadow: 3px 2px 1px #251b1359;
+}
+.about-us p{
+    padding: 3rem;
 }
 
 /* News Section */
@@ -360,10 +364,6 @@ footer{
     transform: scale(1.40);
 }
 
-#about-us h2{
-    font-size: 30px;
-    text-shadow: 3px 2px 1px #251b1359;
-}
 #director{
     grid-area: director;
 

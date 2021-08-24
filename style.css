@@ -58,6 +58,10 @@ nav ul{
 nav ul li{
     display: inline;
 }
+nav ul li .nav-selected{
+    color: #f7bf25;
+    text-shadow: 3px 2px 1px #f7bf259d;
+}
 nav ul li:hover{
     text-shadow: 3px 2px 1px #f5e0c0a8;
 }
@@ -74,13 +78,21 @@ nav ul li a{
 
 .container{
     display: grid;
+    place-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+#home{
     grid: 
     [about-start] "about-us" auto [about-end]
     [news-start] "news-area" auto [news-end]
     [portfolio-start] "portfolio-area" auto [portfolio-end]
-    [contact-start] "contact-area" auto [contact-end] / 1fr;
-    place-items: center;
-    margin: 2rem;
+    [contact-start] "contact-area" auto [contact-end] / .95fr;
+}
+#about{
+    grid:
+    [about-start] "about-us" auto [about-end]
+    [director-start] "director" auto [director-end] / .8fr;
 }
 
 .anchor{ /* addresses offset caused by fixed header placement */
@@ -93,10 +105,19 @@ main{
     margin-top: 80px;
 }
 
-h2{
+h1, h2{
     text-align: center;
     color: #760a04;
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; 
+}
+h3{
+    font-style: italic;
+    text-align: center;
+
+}
+.red{
+    color:#760a04;
+    font-weight: bold;
 }
 
 figcaption{
@@ -141,7 +162,7 @@ figcaption{
     margin-bottom: 2rem;
 }
 
-#news-section, #contact-section, #about-us{
+.fancy-frame{
     border: double 4px transparent;
     border-radius: 5px;
     background-image: linear-gradient(#f5e0c080, #f5e0c080), radial-gradient(circle at top left, #f7bf25,#b5822a);
@@ -150,7 +171,7 @@ figcaption{
     padding: 1.5rem 0;
 }
 
-#about-us img, #news-section img, #featured-portfolio img{
+.img-style{
     /* responsive sizing */
     max-width: 100%;
     height: auto;
@@ -161,7 +182,7 @@ figcaption{
 }
 
 /* Banner Section */
-#banner-section{
+.banner-section{
     display: flex;
     flex-flow: column;
     justify-content: space-evenly;
@@ -172,22 +193,23 @@ figcaption{
 
     background: url('images/backgrounds/dark\ curtain.jpg') center;
 }
-#banner-section #banner-img{
+.banner-section #banner-img{
     filter:drop-shadow(5px 5px 2px #251b13);
 
     /* For the zoom effect */
     transform-origin: 50% -5%; /* This is the default setting to allow for straight zooming */
     transition: transform 5s, filter 3s ease-in-out;
 }
-#banner-section #banner-img:hover{
+.banner-section #banner-img:hover{
     /* for the zoom effect */
     transform: scale(1.45);
 }
-#banner-section #scroll-img{
+.banner-section #scroll-img{
     /* For the zoom effect */
     transition: transform .5s ease;
+    filter:drop-shadow(5px 5px 2px #251b13);
 }
-#banner-section #scroll-img:hover{
+.banner-section #scroll-img:hover{
     /* For the zoom effect */
     transform: scale(1.1);
 }
@@ -251,7 +273,6 @@ figcaption{
     border-style: solid;
     border-image: linear-gradient(to right bottom, #f7bf25, #b5822a);
     border-image-slice: 1;
-    
 }
 #featured-portfolio #portfolio-images{
     display: grid;
@@ -326,12 +347,51 @@ footer{
     padding: 3rem 1rem 0 0;
 }
 
+/* About Us Page */
+#about-banner{
+    background: url('images/about\ us/backstage2.jpeg') center;
+    background-size: cover;
+}
+#about-banner #banner-img{
+    filter:drop-shadow(5px 5px 1px #251b13);
+}
+#about-banner #banner-img:hover{
+    /* for the zoom effect */
+    transform: scale(1.40);
+}
+
+#about-us h2{
+    font-size: 30px;
+    text-shadow: 3px 2px 1px #251b1359;
+}
+#director{
+    grid-area: director;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+#director h2{
+    margin-bottom: 0;
+    font-size: 30px;
+}
+#director h3{
+    margin-top: 0;
+}
+#director img{
+    margin: 1rem;
+}
+#director p{
+    padding: 0 3rem;
+}
+
+
 /* Responsive Design */
 @media (max-width: 2000px) {
     header{
         background-size: contain; 
     }    
-    #banner-section{
+    .banner-section{
         background-size: contain;
     }
 }
@@ -344,7 +404,7 @@ footer{
     .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
         top: -210px;
     }
-    #banner-section{
+    .banner-section{
         background-size: cover;
     }
     nav ul li a{
@@ -369,7 +429,7 @@ footer{
     nav ul li a{
         font-size: 20px;
     }
-    #banner-section{
+    .banner-section{
         background-size: cover;
     }
 }
@@ -384,11 +444,11 @@ footer{
     nav ul li a{
         font-size: 20px;
     }
-    #banner-section{
+    .banner-section{
         background-size: cover;
         width: 100vw;
     }
-    #banner-section #banner-img:hover{
+    .banner-section #banner-img:hover{
         /* for the zoom effect */
         transform: scale(1.3);
     }

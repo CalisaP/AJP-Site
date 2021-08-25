@@ -87,12 +87,17 @@ nav ul li a{
     [about-start] "about-us" auto [about-end]
     [news-start] "news-area" auto [news-end]
     [portfolio-start] "portfolio-area" auto [portfolio-end]
-    [contact-start] "contact-area" auto [contact-end] / .95fr;
+    [contact-start] "contact-area" auto [contact-end] / .90fr;
 }
-#about{
+#about-page{
     grid:
     [about-start] "about-us" auto [about-end]
     [director-start] "director" auto [director-end] / .80fr;
+}
+#news-page{
+    grid:
+    [news1-start] "news1" auto [news1-end]
+    [other-news-start] "other-news" auto [other-news-end] / .90fr;
 }
 
 .anchor{ /* addresses offset caused by fixed header placement */
@@ -124,6 +129,38 @@ figcaption{
     text-align: center;
 }
 
+/* General Banner Styling */
+.banner-section{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* for the zoom effect */
+    height: 100vh; 
+    overflow: hidden; /* Hides any overflow of child elements */
+}
+.banner-section .banner-img{
+    filter:drop-shadow(5px 5px 2px #251b13);
+
+    /* For the zoom effect */
+    transform-origin: 50% -5%; /* This is the default setting to allow for straight zooming */
+    transition: transform 5s, filter 3s ease-in-out;
+}
+.banner-section .banner-img:hover{
+    /* for the zoom effect */
+    transform: scale(1.45);
+}
+.banner-section .scroll-img{
+    /* For the zoom effect */
+    transition: transform .5s ease;
+    filter:drop-shadow(5px 5px 2px #251b13);
+}
+.banner-section .scroll-img:hover{
+    /* For the zoom effect */
+    transform: scale(1.1);
+}
+
+/* General Button Styling */
 .button{
     /*background-color: #b5822a;*/
     background: linear-gradient(180deg,#dc8 0%,#f5bf25 49%,#b5822a 51%,#f5bf25 100%); 
@@ -143,6 +180,8 @@ figcaption{
     box-shadow: inset 0px 1px 0px rgba(255,255,255,1),2px 3px 3px rgba(0,0,0,0.3);    
     /* For the zoom effect */
     transition: transform .5s ease;
+    
+    margin-bottom: 2rem;
 }
 .button:hover{
     /* For the zoom effect */
@@ -158,19 +197,31 @@ figcaption{
     justify-content: center;
     margin: 1rem 0;
 }
-.about-us .button, #news-section .button{
-    margin-bottom: 2rem;
-}
 
-.fancy-frame{
+/* General Border Styling */
+.fancy-border{
     border: double 4px transparent;
     border-radius: 5px;
     background-image: linear-gradient(#f5e0c080, #f5e0c080), radial-gradient(circle at top left, #f7bf25,#b5822a);
     background-origin: border-box;
     background-clip: content-box, border-box;
     padding: 1.5rem 0;
+    background-color: #f5e0c080;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 1.5rem 0;
+}
+.simple-border{
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to right bottom, #f7bf25, #b5822a);
+    border-image-slice: 1;
+
+    margin: 3rem 0;
+    padding: 2rem 0;
+
 }
 
+/* General Image Styling */
 .img-style{
     /* responsive sizing */
     max-width: 100%;
@@ -181,37 +232,10 @@ figcaption{
     filter:drop-shadow(5px 5px 2px #251b13ad);
 }
 
+/* Home Page */
 /* Banner Section */
-.banner-section{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
-    align-items: center;
-    /* for the zoom effect */
-    height: 100vh; 
-    overflow: hidden; /* Hides any overflow of child elements */
-
+#home-banner{
     background: url('images/backgrounds/dark\ curtain.jpg') center;
-}
-.banner-section #banner-img{
-    filter:drop-shadow(5px 5px 2px #251b13);
-
-    /* For the zoom effect */
-    transform-origin: 50% -5%; /* This is the default setting to allow for straight zooming */
-    transition: transform 5s, filter 3s ease-in-out;
-}
-.banner-section #banner-img:hover{
-    /* for the zoom effect */
-    transform: scale(1.45);
-}
-.banner-section #scroll-img{
-    /* For the zoom effect */
-    transition: transform .5s ease;
-    filter:drop-shadow(5px 5px 2px #251b13);
-}
-.banner-section #scroll-img:hover{
-    /* For the zoom effect */
-    transform: scale(1.1);
 }
 
 /* About Us Section */
@@ -235,11 +259,8 @@ figcaption{
 /* News Section */
 #news-section{
     grid-area: news-area;
-    background-color: #f5e0c080;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    padding: 1.5rem 0;
 }
-#news-section #news-columns{
+.news .news-columns{
     display: grid;
     /* allows columns to wrap */
     grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
@@ -249,17 +270,17 @@ figcaption{
     height: auto; 
     overflow: hidden; /* Hides any overflow of child elements */
 }
-#news-section h3{
+.news h3{
     text-align: center;
 }
-#news-columns #news-text{
+.news .news-text{
     padding: 0 2rem;
 
     display: flex;
     flex-flow: column;
     align-items: center;
 }
-#news-columns #news-text ul{
+.news .news-text ul{
     align-self: flex-start;
 }
 
@@ -270,13 +291,6 @@ figcaption{
     height: auto; 
     overflow: hidden; /* Hides any overflow of child elements */
     
-    margin: 3rem 0;
-    padding: 2rem 0;
-
-    border-width: 3px;
-    border-style: solid;
-    border-image: linear-gradient(to right bottom, #f7bf25, #b5822a);
-    border-image-slice: 1;
 }
 #featured-portfolio #portfolio-images{
     display: grid;
@@ -352,46 +366,92 @@ footer{
 }
 
 /* About Us Page */
+/* Banner Section */
 #about-banner{
     background: url('images/about\ us/backstage2.jpeg') center;
     background-size: cover;
 }
-#about-banner #banner-img{
-    filter:drop-shadow(5px 5px 1px #251b13);
-}
-#about-banner #banner-img:hover{
+#about-banner .banner-img:hover{
     /* for the zoom effect */
-    transform: scale(1.40);
+    transform: scale(1.38);
 }
 
-#director{
+/* Director Section*/
+#about-page #director{
     grid-area: director;
 
     display: flex;
     flex-flow: column;
     align-items: center;
 }
-#director h2{
+#about-page #director h2{
     margin-bottom: 0;
     font-size: 30px;
 }
-#director h3{
+#about-page #director h3{
     margin-top: 0;
 }
-#director img{
+#about-page #director img{
     margin: 1rem;
 }
-#director p{
+#about-page #director p{
     padding: 0 3rem;
 }
 
+/* News Page */
+/* Banner Section */
+#news-banner{
+    background: url('images/news/marquee.jpeg') center;
+    background-size: cover;
+}
+
+/* News1 Section */
+#news-page #news1{
+    grid-area: news1;
+}
+/* Other News Section */
+#news-page #other-news{
+    grid-area: other-news;
+}
+
+/*Other News Section */
+#other-news{
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */
+}
+#other-news #o-news{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+#o-news img{
+    /* for the zoom effect */
+    transition: transform .5s, filter 1.5s ease-in-out;
+    filter:grayscale(100%) drop-shadow(5px 5px 2px #251b13ad);
+    margin: 1rem;
+}
+#o-news img:hover{
+    /* for the zoom effect */
+    filter: grayscale(0) drop-shadow(5px 5px 2px #251b13e1);
+    transform: scale(1.05);
+}
+#o-news figcaption{
+    margin: 0;
+    padding: 0 .5rem;
+    background-image: linear-gradient(#f5e0c080, #f5e0c080), radial-gradient(circle at top left, #f7bf257c,#b5822a7c);
+}
+#o-news .button{
+    margin-bottom: 0;
+}
 
 /* Responsive Design */
 @media (max-width: 2000px) {
     header{
         background-size: contain; 
     }    
-    .banner-section{
+    #home-banner{
         background-size: contain;
     }
 }
@@ -404,7 +464,7 @@ footer{
     .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
         top: -210px;
     }
-    .banner-section{
+    #home-banner{
         background-size: cover;
     }
     nav ul li a{
@@ -429,7 +489,7 @@ footer{
     nav ul li a{
         font-size: 20px;
     }
-    .banner-section{
+    #home-banner{
         background-size: cover;
     }
 }
@@ -444,11 +504,11 @@ footer{
     nav ul li a{
         font-size: 20px;
     }
-    .banner-section{
+    #home-banner{
         background-size: cover;
         width: 100vw;
     }
-    .banner-section #banner-img:hover{
+    #home-banner .banner-img:hover{
         /* for the zoom effect */
         transform: scale(1.3);
     }
@@ -456,4 +516,4 @@ footer{
 
 /* Fancy zooming based on Rahul Arora @ https://w3bits.com/css-image-hover-zoom/ */
 /* Fancy button styling based on Yuhomyan @ https://codepen.io/yuhomyan/pen/jOqvjZq */
-/* Fancy borders based on Tasi @ https://www.codegrepper.com/code-examples/css/css+gold+border and sterokai @ https://gist.github.com/stereokai/36dc0095b9d24ce93b045e2ddc60d7a0 */
+/* Fancy & simple borders based on Tasi @ https://www.codegrepper.com/code-examples/css/css+gold+border and sterokai @ https://gist.github.com/stereokai/36dc0095b9d24ce93b045e2ddc60d7a0 */

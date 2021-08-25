@@ -25,7 +25,7 @@
                             </a>
                         </li>
                         <li id="news">
-                            <a href="#news-anchor">News</a>
+                            <a href="news.html">News</a>
                         </li>
                         <li id="portfolio">
                             <a href="#portfolio-anchor">Portfolio</a>
@@ -39,20 +39,20 @@
         </header>
             
         <main>
-            <section class="banner-section">
+            <section class="banner-section" id="home-banner">
                 <a class="anchor" id="banner-anchor"></a> <!-- To address offset from fixed header-->                
                 <figure >
-                    <img id="banner-img" src="images/homepage/Cream Welcome Logo-correct-300x305.png"/>
+                    <img class="banner-img" src="images/homepage/Cream Welcome Logo-correct-300x305.png"/>
                 </figure>
                 <figure>
-                    <a href="#news-anchor">
-                        <img id="scroll-img" src="images/homepage/Arrows Cream Down.png" /> <!-- Arrow by wiran toni from the Noun Project -->
+                    <a href="#about-us-anchor">
+                        <img class="scroll-img" src="images/homepage/Arrows Cream Down.png" /> <!-- Arrow by wiran toni from the Noun Project -->
                     </a>
                 </figure>
             </section>
             
             <div class="container" id="home">
-                <section  class="about-us fancy-frame">
+                <section  class="about-us fancy-border">
                     <a class="anchor" id="about-us-anchor"></a> <!-- To address offset from fixed header-->                
                     <h2>AbeoJacksonProductions</h2>
                     <figure>
@@ -62,56 +62,46 @@
                     <br>
                     <br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quidem quod voluptas ipsam id, quaerat iste beatae accusantium optio illum quis fugiat at numquam ad culpa necessitatibus perspiciatis sed tempore.</p>
-                    <a href="about.html" class="button">See More</a>
+                    <a href="about.html#about-ajp-anchor" class="button">See More</a>
                 </section>
 
-                <section id="news-section" class="fancy-frame">
+                <section id="news-section" class="news fancy-border">
                     <a class="anchor" id="news-anchor"></a> <!-- To address offset from fixed header-->                
                     <h2>What's New With AJP?</h2>
-                    <div id="news-columns">
+                    <div class="news-columns">
                         <figure>
                             <img src="images/news/Acting Class.png" class="img-style"/>
                         </figure>
-                        <div id="news-text">
+                        <div class="news-text">
                             <h3>So You Want to Act 2</h3>
                             <p>A three-month course perfect for aspiring actors and those looking to discover who they are, find their authentic voice and overcome perceived limitations. 
                             <br>
                             <br>
-                            Just 10 spots available! 
-                            <br>
-                            <br>
-                            The course will explore the following through the lens of local/Caribbean aesthetics and methodologies, alongside Chekhov and Laban: </p>
-                            <ul>
-                                <li>Voice training for the Actor</li>
-                                <li>Body + Spatial Awareness</li>
-                                <li>Writing + Telling Stories</li>
-                                <li>Movement for the Actor</li>
-                                <li>Self-awareness+ Development</li>
-                                <li>Script + Character Analysis</li>
-                            </ul>
-                            <p>For more info:</p>
-                            <a href="mailto:abeojackson@gmail.com" class="button">Send Email</a>
+                            Just 10 spots available! </p>
+
+                            <div class="button-placement">
+                            <a href="news.html#news1-anchor" class="button button">More Info</a>
+                            </div>
                         </div>
-                        
                     </div>
                 </section>
 
-                <section id="featured-portfolio">
+                <section id="featured-portfolio" class="simple-border">
                     <a class="anchor" id="portfolio-anchor"></a> <!-- To address offset from fixed header-->
                     <h2>Portfolio</h2>
                     <div id="portfolio-images">
                         <figure>
-                            <a href="https://www.facebook.com/17303019/videos/10100714182339834/">
+                            <a href="https://www.facebook.com/17303019/videos/10100714182339834/" target=”_blank”>
                                 <img src="images/portfolio/i am_Merikin.jpeg" class="img-style"/>
                             </a>
                         </figure>
                         <figure >
-                            <a href="https://www.facebook.com/17303019/videos/10100723251899364/">
+                            <a href="https://www.facebook.com/17303019/videos/10100723251899364/" target=”_blank”>
                                 <img src="images/portfolio/un-spoken-2-2159x1384.png" class="img-style"/>
                             </a>
                         </figure>
                         <figure>
-                            <a href="https://www.youtube.com/watch?v=PL52kjFcHPA&ab_channel=AnneMusisi">
+                            <a href="https://www.youtube.com/watch?v=PL52kjFcHPA&ab_channel=AnneMusisi"target=”_blank”>
                                 <img src="images/portfolio/ruth-1061x680.png" class="img-style"/>
                             </a>
                         </figure>
@@ -121,7 +111,7 @@
                     </div>
                 </section>
 
-                <section id="contact-section" class="fancy-frame">
+                <section id="contact-section" class="fancy-border">
                     <a class="anchor" id="contact-anchor"></a> <!-- To address offset from fixed header-->
                     <h2>Get in Touch</h2>
                     <p>For bookings or for more information, get in touch with us at:</p>
@@ -131,12 +121,12 @@
                                 <img src="images/homepage/email-circle-gold-cropped-100.png"/>
                             </a>
                             <figcaption>
-                                <a href="mailto:abeojackson@gmail.com">abeojackson@gmail.com</a>
+                                <a href="mailto:abeojackson@gmail.com" target=”_blank”>abeojackson@gmail.com</a>
                             </figcaption>
                         </figure>
                         
                         <figure id="fb-icon">
-                            <a href="https://www.facebook.com/AbeoJacksonProductions">
+                            <a href="https://www.facebook.com/AbeoJacksonProductions" target=”_blank”>
                                 <img src="images/homepage/fb-circle-gold-cropped1-100.png" />
                             </a>
                             <figcaption>AbeoJacksonProductions</figcaption>

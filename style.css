@@ -99,6 +99,12 @@ nav ul li a{
     [news1-start] "news1" auto [news1-end]
     [other-news-start] "other-news" auto [other-news-end] / .90fr;
 }
+#portfolio-page{
+    grid:
+    [film-start] "film" auto [film-end]
+    [theatre-start] "theatre" auto [theatre-end]
+    [dance-start] "dance" auto [dance-end] / .90fr;
+}
 
 .anchor{ /* addresses offset caused by fixed header placement */
     position: relative;
@@ -232,12 +238,7 @@ figcaption{
     filter:drop-shadow(5px 5px 2px #251b13ad);
 }
 
-/* Home Page */
-/* Banner Section */
-#home-banner{
-    background: url('images/backgrounds/dark\ curtain.jpg') center;
-}
-
+/* General About Us Styling */
 /* About Us Section */
 .about-us{
     grid-area: about-us;
@@ -256,10 +257,7 @@ figcaption{
     padding: 3rem;
 }
 
-/* News Section */
-#news-section{
-    grid-area: news-area;
-}
+/* General News Styling */
 .news .news-columns{
     display: grid;
     /* allows columns to wrap */
@@ -284,32 +282,54 @@ figcaption{
     align-self: flex-start;
 }
 
+/* General Portfolio Styling */
+.portfolio-styling{
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */      
+}
+.portfolio-styling .portfolio-images{
+display: grid;
+/* allows columns to wrap */
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+place-items: end center;
+}
+.portfolio-styling img{
+/* for the zoom effect */
+transition: transform .5s, filter 1.5s ease-in-out;
+filter:grayscale(100%) drop-shadow(5px 5px 2px #251b13ad);
+
+}
+.portfolio-styling img:hover{
+/* for the zoom effect */
+filter: grayscale(0) drop-shadow(5px 5px 2px #251b13e1);
+transform: scale(1.05);
+}
+
+/* General Footer Styling */
+footer{
+    grid-area: footer;
+    
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3rem 1rem 0 0;
+}
+
+/* Home Page */
+/* Banner Section */
+#home-banner{
+    background: url('images/backgrounds/dark\ curtain.jpg') center;
+}
+/* News Section */
+#news-section{
+    grid-area: news-area;
+}
 /* Portfolio Section */
 #featured-portfolio{
     grid-area: portfolio-area;
-    /* for the zoom effect */
-    height: auto; 
-    overflow: hidden; /* Hides any overflow of child elements */
-    
 }
-#featured-portfolio #portfolio-images{
-    display: grid;
-    /* allows columns to wrap */
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    place-items: end center;
-}
-#featured-portfolio img{
-    /* for the zoom effect */
-    transition: transform .5s, filter 1.5s ease-in-out;
-    filter:grayscale(100%) drop-shadow(5px 5px 2px #251b13ad);
-
-}
-#featured-portfolio img:hover{
-    /* for the zoom effect */
-    filter: grayscale(0) drop-shadow(5px 5px 2px #251b13e1);
-    transform: scale(1.05);
-}
-
 /* Contact Section */
 #contact-section{
     grid-area: contact-area;
@@ -354,16 +374,6 @@ figcaption{
     color: #251b13;
 }
 
-/* Footer Section */
-footer{
-    grid-area: footer;
-    
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 3rem 1rem 0 0;
-}
 
 /* About Us Page */
 /* Banner Section */
@@ -375,7 +385,6 @@ footer{
     /* for the zoom effect */
     transform: scale(1.38);
 }
-
 /* Director Section*/
 #about-page #director{
     grid-area: director;
@@ -404,7 +413,6 @@ footer{
     background: url('images/news/marquee.jpeg') center;
     background-size: cover;
 }
-
 /* News1 Section */
 #news-page #news1{
     grid-area: news1;
@@ -413,8 +421,6 @@ footer{
 #news-page #other-news{
     grid-area: other-news;
 }
-
-/*Other News Section */
 #other-news{
     /* for the zoom effect */
     height: auto; 
@@ -445,6 +451,27 @@ footer{
 #o-news .button{
     margin-bottom: 0;
 }
+
+/* Portfolio Page */
+/*Banner Section */
+#portfolio-banner{
+    background: url('images/portfolio/theatre-seats.jpeg') center;
+    background-size: cover;
+}
+#portfolio-banner .banner-img:hover{
+    /* for the zoom effect */
+    transform: scale(1.50);
+}
+#portfolio-page #film{
+    grid-area: film;
+}
+#portfolio-page #theatre{
+    grid-area: theatre;
+}
+#portfolio-page #dance{
+    grid-area: dance
+}
+
 
 /* Responsive Design */
 @media (max-width: 2000px) {

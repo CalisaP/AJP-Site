@@ -526,7 +526,7 @@ footer{
 #merikin-page .media{
     width: 100%;
 }
-#merikin-page .media .iframe-placement{
+#merikin-page .media .iframe-placement{ /* For iframe responsiveness */
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -535,6 +535,7 @@ footer{
 #merikin-page .media iframe{
     border-radius: 5px;
     filter:drop-shadow(5px 5px 2px #251b13ad);
+    /* For iframe responsiveness */
     position: absolute;
     top: 0;
     left: 3rem;
@@ -614,7 +615,7 @@ footer{
     .anchor{
         top: -250px;
     }
-    #merikin-page .media iframe{
+    #merikin-page .media iframe{ /* For iframe responsiveness */
         left: 1rem;
     }
 }
@@ -657,7 +658,6 @@ footer{
     #about-page #director img{
         margin: 0;
     }
-    
      #about-page #director p{
          padding: 0 1rem;
      }

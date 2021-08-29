@@ -581,7 +581,7 @@ footer{
         margin-top: 80px;
     }
     .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
-        top: -280px;
+        top: -200px;
     }
     header{
         background-size: cover;
@@ -613,7 +613,7 @@ footer{
         transform: scale(1.3);
     }
     .anchor{
-        top: -250px;
+        top: -280px;
     }
     #merikin-page .media iframe{ /* For iframe responsiveness */
         left: 1rem;
@@ -679,7 +679,6 @@ footer{
       height: 80vh;
     }
   }*/
-  
   /* Portfolio responsiveness for small screens in portrait mode */
   @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
     #portfolio-page .portfolio-images{

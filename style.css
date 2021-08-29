@@ -131,10 +131,13 @@ h1, h2{
 h3{
     font-style: italic;
     text-align: center;
-
 }
 .red{
     color:#760a04;
+    font-weight: bold;
+}
+.gold{
+    color:#b5822a;
     font-weight: bold;
 }
 .bold{
@@ -337,6 +340,13 @@ footer{
 #featured-portfolio{
     grid-area: portfolio-area;
 }
+#featured-portfolio h2{
+    margin-bottom: 0;
+}
+#featured-portfolio .red{
+    text-align: center;
+    margin-top: 0;
+}
 /* Contact Section */
 #contact-section{
     grid-area: contact-area;
@@ -456,7 +466,13 @@ footer{
     background: url('images/portfolio/theatre-seats.jpeg') center;
     background-size: cover;
 }
-
+.portfolio-styling h2{
+    margin-bottom: 0;
+}
+.portfolio-styling p{
+    text-align: center;
+    margin-top: 0;
+}
 #portfolio-page .portfolio-images{
     display: flex;
     flex-wrap: wrap;
@@ -469,7 +485,6 @@ footer{
     min-width: 100%;
     object-fit: cover;
 }
-
 /* Film Section */
 #portfolio-page #film{
     grid-area: film;
@@ -526,6 +541,10 @@ footer{
     padding-left: 3rem;
 }
 /* Media Section */
+/* Trailer */
+#merikin-page .trailer{
+    grid-area: trailer;
+}
 #merikin-page .media{
     width: 100%;
 }
@@ -547,11 +566,16 @@ footer{
     width: 90%;
     height: 90%;
 }
-#merikin-page .trailer{
-    grid-area: trailer;
-}
+/* Gallery */
 #merikin-page .gallery{
     grid-area: gallery;
+    margin-top: 0;
+}
+#merikin-page .gallery h2{
+    margin-bottom: 0;
+}
+#merikin-page .gallery .red{
+    text-align: center;
     margin-top: 0;
 }
 #merikin-page .gallery .gallery-images{

@@ -107,7 +107,6 @@ nav ul li a{
 .project-page{
     grid:
     [about-start] "about" auto [about-end]
-    [media-start] "media" auto [media-end]
     [trailer-start] "trailer" auto [media-end]
     [gallery-start] "gallery" auto [gallery-end] 
     [button-start] "button" auto [button-end] / .80fr;
@@ -531,33 +530,70 @@ footer{
 }
 
 /* Portfolio Project Pages */
+/* General About Sections */
 .project-page .about{
     grid-area: about;
 }
 .project-page .about p{
     padding: 0 3rem;
 }
+.project-page .about .cast{
+    list-style: none;
+    padding-left: 3rem;
+}
 .project-page .about blockquote{
     padding-left: 3rem;
     padding-right: 3rem;
-
 }
-.project-page .media{
-    grid-area: media;
-}
+/* General Media Sections */
 .project-page .trailer{
+    grid-area: trailer;
     width: 80vw;
 }
 .project-page .trailer .video-placement{
     display: flex;
     margin: 0 3rem;
 }
-.project-page .media video{
+.project-page .media video, .project-page .media iframe{
     border-radius: 5px;
     filter:drop-shadow(5px 5px 2px #251b13ad);
     height: 100%;
     width: 100%;
 }
+.project-page .gallery{
+    grid-area: gallery;
+    margin-top: 0;
+}
+.project-page .gallery h2{
+    margin-bottom: 0;
+}
+.project-page .gallery .red{
+    text-align: center;
+    margin-top: 0;
+}
+.project-page .gallery .gallery-images{
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-page .gallery .gallery-images figure{
+    height: 30vh;
+    flex-grow: 1;
+    margin: .8rem;
+}
+/* To address any warping in last image */
+.project-page .gallery .gallery-images figure:last-of-type{
+    flex-grow: 10;
+}
+.project-page .gallery .gallery-images figure img{
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+.project-page .button-placement{
+    grid-area: button;
+}
+
 /* Merikin Project Page */
 #merikin-banner{
     background: url('images/portfolio/film/I Am_Merikin/i\ am_Merikin-banner.jpg') center;
@@ -565,77 +601,42 @@ footer{
     height: 50vh; 
 }
 /* About Section */
-#merikin-page ul{
-    list-style: none;
-    padding-left: 3rem;
-}
 /* Media Section */
 /* Trailer */
-#merikin-page .trailer{
-    grid-area: trailer;
-}
 #merikin-page .media{
     width: 100%;
 }
-/* For iframe responsiveness */
-/* 
-#merikin-page .media .media-placement{ 
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%;
-}
-#merikin-page .media blockquote{
-    position: absolute;
-    top: 0;
-    left: 3rem;
-    bottom: 0;
-    right: 0;
-    width: 90%;
-    height: 90%; 
-}
-*/
-/* Gallery */
-#merikin-page .gallery{
-    grid-area: gallery;
-    margin-top: 0;
-}
-#merikin-page .gallery h2{
-    margin-bottom: 0;
-}
-#merikin-page .gallery .red{
-    text-align: center;
-    margin-top: 0;
-}
-#merikin-page .gallery .gallery-images{
-    display: flex;
-    flex-wrap: wrap;
-}
-#merikin-page .gallery .gallery-images figure{
-    height: 30vh;
-    flex-grow: 1;
-    margin: .8rem;
-}
-/* To address any warping in last image */
-#merikin-page .gallery .gallery-images figure:last-of-type{
-    flex-grow: 10;
-}
-#merikin-page .gallery .gallery-images figure img{
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-}
-#merikin-page .button-placement{
-    grid-area: button;
-}
+
 /* UN-SPOKEN Project Page */
 #unspoken-banner{
     background: url('images/portfolio/film/UN-SPOKEN/un-spoken-banner.png') center;
     background-size: cover;
     height: 50vh; 
 }
+/* Ruth Project Page */
+#ruth-banner{
+    background: url('images/portfolio/film/Ruth/ruth-banner.png') center;
+    background-size: cover;
+    height: 50vh; 
+}
 /* Media Section */
+/* Trailer */
+/* For iframe responsiveness */
+#ruth-page .media .video-placement{ 
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+#ruth-page .media iframe{
+    position: absolute;
+    top: 0;
+    left: .5rem;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 90%; 
+}
 
 
 
@@ -729,19 +730,18 @@ footer{
     .project-page .about blockquote{
         padding-left: 0;
         padding-right: 0;
-    }
-    /* For iframe responsiveness */
-    /*
-    #merikin-page .media iframe{ 
-        left: 1rem;
-    }
-    */
+    }    
     .project-page .trailer{
         width: 90vw;
     }    
     .project-page .trailer .video-placement{
         margin: 0;
-    }    
+    }
+    /* For iframe responsiveness */
+    /*.project-page .trailer iframe{ 
+        left: 2rem;
+    }*/
+    
 }
 @media (max-width: 400px) {
     nav ul li a{

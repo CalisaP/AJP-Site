@@ -545,6 +545,19 @@ footer{
 .project-page .media{
     grid-area: media;
 }
+.project-page .trailer{
+    width: 80vw;
+}
+.project-page .trailer .video-placement{
+    display: flex;
+    margin: 0 3rem;
+}
+.project-page .media video{
+    border-radius: 5px;
+    filter:drop-shadow(5px 5px 2px #251b13ad);
+    height: 100%;
+    width: 100%;
+}
 /* Merikin Project Page */
 #merikin-banner{
     background: url('images/portfolio/film/I Am_Merikin/i\ am_Merikin-banner.jpg') center;
@@ -564,24 +577,24 @@ footer{
 #merikin-page .media{
     width: 100%;
 }
-#merikin-page .media .iframe-placement{ /* For iframe responsiveness */
+/* For iframe responsiveness */
+/* 
+#merikin-page .media .media-placement{ 
     position: relative;
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
 }
-#merikin-page .media iframe{
-    border-radius: 5px;
-    filter:drop-shadow(5px 5px 2px #251b13ad);
-    /* For iframe responsiveness */
+#merikin-page .media blockquote{
     position: absolute;
     top: 0;
     left: 3rem;
     bottom: 0;
     right: 0;
     width: 90%;
-    height: 90%;
+    height: 90%; 
 }
+*/
 /* Gallery */
 #merikin-page .gallery{
     grid-area: gallery;
@@ -623,19 +636,7 @@ footer{
     height: 50vh; 
 }
 /* Media Section */
-#unspoken-page .trailer{
-    width: 80vw;
-}
-#unspoken-page .trailer .video-placement{
-    display: flex;
-    margin: 0 3rem;
-}
-#unspoken-page .media video{
-    border-radius: 5px;
-    filter:drop-shadow(5px 5px 2px #251b13ad);
-    height: 100%;
-    width: 100%;
-}
+
 
 
 /* Responsive Design */
@@ -729,13 +730,16 @@ footer{
         padding-left: 0;
         padding-right: 0;
     }
-    #merikin-page .media iframe{ /* For iframe responsiveness */
+    /* For iframe responsiveness */
+    /*
+    #merikin-page .media iframe{ 
         left: 1rem;
     }
-    #unspoken-page .trailer{
+    */
+    .project-page .trailer{
         width: 90vw;
     }    
-    #unspoken-page .trailer .video-placement{
+    .project-page .trailer .video-placement{
         margin: 0;
     }    
 }
@@ -778,7 +782,7 @@ footer{
     #about-page #director img{
         margin: 0;
     }
-     #about-page #director p{
+    #about-page #director p{
          padding: 0 1rem;
      }
 }

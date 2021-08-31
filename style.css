@@ -560,6 +560,21 @@ footer{
     height: 100%;
     width: 100%;
 }
+.project-page .media .iframe{ 
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+.project-page .media .iframe iframe{
+    position: absolute;
+    top: 0;
+    left: .5rem;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 90%; 
+}
 .project-page .gallery{
     grid-area: gallery;
     margin-top: 0;
@@ -613,29 +628,23 @@ footer{
     background-size: cover;
     height: 50vh; 
 }
+
 /* Ruth Project Page */
 #ruth-banner{
     background: url('images/portfolio/film/Ruth/ruth-banner.png') center;
     background-size: cover;
     height: 50vh; 
 }
-/* Media Section */
-/* Trailer */
-/* For iframe responsiveness */
-#ruth-page .media .video-placement{ 
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%;
+
+/* Like Dreaming, Backwards Project Page */
+#like-dreaming-banner{
+    background: url('images/portfolio/film/Like\ Dreaming\ Backwards/like-dreaming-backwards-banner.jpg') center;
+    background-size: cover;
+    height: 50vh; 
 }
-#ruth-page .media iframe{
-    position: absolute;
-    top: 0;
-    left: .5rem;
-    bottom: 0;
-    right: 0;
-    width: 90%;
-    height: 90%; 
+#like-dreaming-page .trailer .video-placement{
+    height: 70vh;
+    width: auto;
 }
 
 
@@ -741,7 +750,9 @@ footer{
     /*.project-page .trailer iframe{ 
         left: 2rem;
     }*/
-    
+    #like-dreaming-banner img{
+        margin-top: 3rem;
+    }
 }
 @media (max-width: 400px) {
     nav ul li a{

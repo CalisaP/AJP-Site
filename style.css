@@ -554,19 +554,24 @@ footer{
     display: flex;
     margin: 0 3rem;
 }
-.project-page .media video, .project-page .media iframe{
+.project-page .trailer .tall-video{
+    height: 70vh;
+    width: auto;
+
+}
+.project-page .trailer video, .project-page .trailer iframe{
     border-radius: 5px;
     filter:drop-shadow(5px 5px 2px #251b13ad);
     height: 100%;
     width: 100%;
 }
-.project-page .media .iframe{ 
+.project-page .trailer .iframe{ 
     position: relative;
     overflow: hidden;
     width: 100%;
     padding-top: 56.25%;
 }
-.project-page .media .iframe iframe{
+.project-page .trailer .iframe iframe{
     position: absolute;
     top: 0;
     left: .5rem;
@@ -614,6 +619,7 @@ footer{
     background: url('images/portfolio/film/I Am_Merikin/i\ am_Merikin-banner.jpg') center;
     background-size: cover;
     height: 50vh; 
+    padding-top: 7rem;
 }
 /* About Section */
 /* Media Section */
@@ -627,6 +633,7 @@ footer{
     background: url('images/portfolio/film/UN-SPOKEN/un-spoken-banner.png') center;
     background-size: cover;
     height: 50vh; 
+    padding-top: 7rem;
 }
 
 /* Ruth Project Page */
@@ -634,19 +641,24 @@ footer{
     background: url('images/portfolio/film/Ruth/ruth-banner.png') center;
     background-size: cover;
     height: 50vh; 
+    padding-top: 7rem;
 }
 
 /* Like Dreaming, Backwards Project Page */
 #like-dreaming-banner{
     background: url('images/portfolio/film/Like\ Dreaming\ Backwards/like-dreaming-backwards-banner.jpg') center;
     background-size: cover;
-    height: 50vh; 
-}
-#like-dreaming-page .trailer .video-placement{
-    height: 70vh;
-    width: auto;
+    height: 50vh;
+    padding-top: 7rem; 
 }
 
+/* The Art of Seduction */
+#seduction-banner{
+    background: url('images/portfolio/film/The\ Art\ of\ Seduction/the-art-of-seduction-banner.png') center;
+    background-size: cover;
+    height: 50vh;
+    padding-top: 7rem;
+}
 
 
 /* Responsive Design */

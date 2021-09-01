@@ -660,6 +660,18 @@ footer{
     padding-top: 7rem;
 }
 
+/* 7 Women 6 Shorts */
+#seven-women-banner{
+    background: url('images/portfolio/film/7\ Women\ 6\ Shorts/7-women-banner.jpg') center;
+    background-size: cover;
+    height: 50vh;
+    padding-top: 7rem;
+}
+#seven-women-page .trailer video{
+    height: 70vh;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 2672px) {

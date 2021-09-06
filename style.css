@@ -621,8 +621,6 @@ footer{
     height: 50vh; 
     padding-top: 7rem;
 }
-/* About Section */
-/* Media Section */
 /* Trailer */
 #merikin-page .media{
     width: 100%;
@@ -671,6 +669,17 @@ footer{
     height: 70vh;
 }
 
+/* Laugh & Cry */
+#laugh-cry-banner{
+    background: url('images/portfolio/theatre/Laugh\ and\ Cry/laugh-cry-banner.jpg') center;
+    background-size: cover;
+    height: 50vh;
+    padding-top: 7rem;
+}
+#laugh-cry-page .gallery{
+    width: 80vw;
+    height: 70vh;
+}
 
 
 /* Responsive Design */
@@ -722,6 +731,9 @@ footer{
     } 
     nav ul li a{
         font-size: 23px;
+    }
+    #laugh-cry-page .trailer .iframe{
+        margin-left: 1.5rem;
     }
 }
 @media (max-width: 550px) {
@@ -777,6 +789,9 @@ footer{
     #like-dreaming-banner img{
         margin-top: 3rem;
     }
+    #laugh-cry-page .trailer .iframe{
+        margin-left: 1rem;
+    }
 }
 @media (max-width: 400px) {
     nav ul li a{
@@ -789,6 +804,9 @@ footer{
     }
     nav ul li a{
         padding: .3em .5em .1em .5em;
+    }
+    #laugh-cry-page .trailer .iframe{
+        margin-left: .5rem;
     }
 }
 @media (max-width: 320px){

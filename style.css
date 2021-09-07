@@ -283,7 +283,8 @@ figcaption{
     display: grid;
     /* allows columns to wrap */
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    place-items: center;
+    place-items: center, start;
+    justify-content: center;
 
     /* for the zoom effect */
     height: auto; 
@@ -343,9 +344,15 @@ footer{
     background: url('images/backgrounds/dark\ curtain.jpg') center;
 }
 /* News Section */
-#news-section{
+#home #news-section{
     grid-area: news-area;
 }
+#home #news-section .news-columns .column1, .column2{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 /* Portfolio Section */
 #featured-portfolio{
     grid-area: portfolio-area;

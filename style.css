@@ -96,6 +96,7 @@ nav ul li a{
 #news-page{
     grid:
     [news1-start] "news1" auto [news1-end]
+    [news2-start] "news2" auto [news2-end]
     [other-news-start] "other-news" auto [other-news-end] / .90fr;
 }
 #portfolio-page{
@@ -443,9 +444,29 @@ footer{
     background: url('images/news/marquee.jpeg') center;
     background-size: cover;
 }
+/* Video Styling */
+#news-page .news-columns .video-placement{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+#news-page .news-columns .video-placement iframe{
+    border-radius: 5px;
+    filter:drop-shadow(5px 5px 2px #251b13ad);
+    margin: 0;
+    padding: 0;
+}
+
 /* News1 Section */
 #news-page #news1{
     grid-area: news1;
+    margin-bottom: 3rem;
+}
+/* News2 Section*/
+#news-page #news2{
+    grid-area: news2;
 }
 /* Other News Section */
 #news-page #other-news{
@@ -709,6 +730,16 @@ footer{
     #merikin-page .gallery .gallery-images figure img{
         object-fit: contain;
     }
+    #news-page .video-placement{ 
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    #news-page .video-placement iframe{
+        position: absolute;
+        width: 90%;
+        height: 90%; 
+    }    
 }
 @media (max-width: 910px) {
     .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
@@ -799,6 +830,12 @@ footer{
     #laugh-cry-page .trailer .iframe{
         margin-left: 1rem;
     }
+    #news-page .video-placement{ 
+        position: inherit;
+    }
+    #news-page .video-placement iframe{
+        position: inherit;
+    }    
 }
 @media (max-width: 400px) {
     nav ul li a{

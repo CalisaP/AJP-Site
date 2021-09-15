@@ -541,10 +541,9 @@ footer{
     margin: .5rem;
 }
 /* To address any warping in last image */
-/*
 #portfolio-page #theatre .portfolio-images figure:last-child{
     flex-grow: 10;
-}*/
+}
 #portfolio-page #theatre .portfolio-images figure img{
     object-fit: contain;
 }
@@ -640,6 +639,22 @@ footer{
 }
 .project-page .button-placement{
     grid-area: button;
+}
+/* Heartbeat Project Page */
+#heartbeat-banner{
+    background: url('images/portfolio/film/Heartbeat\ of\ a\ Nation/heartbeat-banner.png') center;
+    background-size: cover;
+    height: 50vh;
+    padding-top: 7em;
+}
+#heartbeat-banner figure{
+    width: 80%;
+}
+#heartbeat-page .about ul{
+    list-style: none;
+}
+#heartbeat-page .about ul li{
+    padding: .5rem 0;
 }
 
 /* Merikin Project Page */

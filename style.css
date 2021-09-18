@@ -954,8 +954,8 @@ footer .bottom-row{
          padding: 0 1rem;
      }
     footer .top-row .left p:nth-of-type(1){
-        font-size: 12px;
-
+        padding-left: 4.5rem;
+    }
 }
 
   /* Portfolio responsiveness for portrait mode */

@@ -56,6 +56,7 @@ nav ul{
 }
 nav ul li{
     display: inline;
+    transition: 1s; /* Controls fade-in: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_fade1 */
 }
 nav ul li .nav-selected{
     color: #f7bf25;

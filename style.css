@@ -103,7 +103,8 @@ nav ul li a{
     grid:
     [film-start] "film" auto [film-end]
     [theatre-start] "theatre" auto [theatre-end]
-    [dance-start] "dance" auto [dance-end] / .90fr;
+    [dance-start] "dance" auto [dance-end] 
+    [podcasts-start] "podcasts" auto [podcasts-end] / .90fr;
 }
 #contact-page{
     grid: 
@@ -520,6 +521,17 @@ figcaption{
     height: 60vh;
     margin: 1rem;
 }
+/* Podcasts Section */
+#portfolio-page #podcasts{
+    grid-area: podcasts;
+    width: 100%;
+}
+#portfolio-page #podcasts .portfolio-images figure{
+    height: 30vh;
+    width: 40vh;
+    margin: 1rem;
+}
+
 
 /* Contact Us Page */
 #contact-banner{
@@ -715,7 +727,7 @@ figcaption{
     padding-top: 7rem; 
 }
 
-/* The Art of Seduction */
+/* The Art of Seduction Project Page */
 #seduction-banner{
     background: url('images/portfolio/film/The\ Art\ of\ Seduction/the-art-of-seduction-banner.png') center;
     background-size: cover;
@@ -723,7 +735,7 @@ figcaption{
     padding-top: 7rem;
 }
 
-/* 7 Women 6 Shorts */
+/* 7 Women 6 Shorts Project Page */
 #seven-women-banner{
     background: url('images/portfolio/film/7\ Women\ 6\ Shorts/7-women-banner.jpg') center;
     background-size: cover;
@@ -734,7 +746,7 @@ figcaption{
     height: 70vh;
 }
 
-/* Laugh & Cry */
+/* Laugh & Cry Project Page*/
 #laugh-cry-banner{
     background: url('images/portfolio/theatre/Laugh\ and\ Cry/laugh-cry-banner.jpg') center;
     background-size: cover;
@@ -745,6 +757,21 @@ figcaption{
     width: 80vw;
     height: 70vh;
 }
+
+/* RockDBoat868 Project Page */
+#rock-banner{
+    background: url('images/portfolio/podcasts/rockdboat868-banner.png') center;
+    background-size: cover;
+    height: 50vh;
+    padding-top: 7rem;
+}
+#rock-page .about ul{
+    list-style: none;
+}
+#rock-page .gallery{
+    width: 100%;
+}
+
 
 /* Footer */
 footer{

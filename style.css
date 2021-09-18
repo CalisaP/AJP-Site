@@ -105,6 +105,10 @@ nav ul li a{
     [theatre-start] "theatre" auto [theatre-end]
     [dance-start] "dance" auto [dance-end] / .90fr;
 }
+#contact-page{
+    grid: 
+    [contact-us-start] "contact-us" auto [contact-us-end] / .90fr;
+}
 .project-page{
     grid:
     [about-start] "about" auto [about-end]
@@ -366,37 +370,6 @@ figcaption{
 #contact-section p{
     padding: 1rem;
 }
-#contact-section #contacts{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    /* for the zoom effect */
-    height: auto; 
-    overflow: hidden; /* Hides any overflow of child elements */
-}
-#contacts figure{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-#contacts img{
-    filter:drop-shadow(3px 3px 2px #251b13e1);
-    /* For the zoom effect */
-    transition: transform .5s ease;
-}
-#contacts img:hover{
-    /* for the zoom effect */
-    transform: scale(1.05);
-}
-#contacts img:active{
-    transform: translateY(2px);
-    transform: translateY(2px);
-}
-#contacts a{
-    color: #251b13;
-}
 
 
 /* About Us Page */
@@ -544,6 +517,52 @@ figcaption{
     height: 60vh;
     margin: 1rem;
 }
+
+/* Contact Us Page */
+#contact-banner{
+    background: url('images/contact\ us/script.jpeg') center;
+    background-size: cover;
+}
+#contact-page #contact-us{
+    grid-area: "contact-us";
+    padding: 2rem 0;
+}
+#contact-page #contact-us p{
+    padding: 1rem;
+    text-align: center;
+}
+#contact-page #contact-us .contacts{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    /* for the zoom effect */
+    height: auto; 
+    overflow: hidden; /* Hides any overflow of child elements */
+}
+#contact-page #contact-us .contacts figure{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact-page #contact-us .contacts img{
+    filter:drop-shadow(3px 3px 2px #251b13e1);
+    /* For the zoom effect */
+    transition: transform .5s ease;
+}
+#contact-page #contact-us .contacts img:hover{
+    /* for the zoom effect */
+    transform: scale(1.05);
+}
+#contact-page #contact-us .contacts img:active{
+    transform: translateY(2px);
+    transform: translateY(2px);
+}
+#contact-page #contact-us .contacts a{
+    color: #251b13;
+}
+
 
 /* Portfolio Project Pages */
 /* General About Sections */

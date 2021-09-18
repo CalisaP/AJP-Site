@@ -378,6 +378,9 @@ figcaption{
     background: url('images/about\ us/backstage2.jpeg') center;
     background-size: cover;
 }
+#about-banner #about-banner-img{
+    filter:drop-shadow(2px 2px 0px #251b13);
+}
 /* Director Section*/
 #about-page #director{
     grid-area: director;
@@ -520,8 +523,16 @@ figcaption{
 
 /* Contact Us Page */
 #contact-banner{
-    background: url('images/contact\ us/script.jpeg') center;
+    background: url('images/contact\ us/script2.jpg') center;
     background-size: cover;
+}
+#contact-banner #contact-banner-img{
+    filter:drop-shadow(2px 2px 0px #fff);
+    filter:drop-shadow(-2px -2px 0px #fff);
+}
+#contact-banner #contact-scroll-img{
+    filter:drop-shadow(2px 2px 2px #fff);
+
 }
 #contact-page #contact-us{
     grid-area: "contact-us";

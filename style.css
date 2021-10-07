@@ -1205,7 +1205,7 @@ footer .bottom-row{
 }
 @media (max-width: 320px){
     header .header-container nav .hamburger{
-        right: 5rem;
+        right: 3rem;
     }
     .container{
         margin: 1rem 0;

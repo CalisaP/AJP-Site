@@ -946,6 +946,12 @@ footer .bottom-row{
     }
 }
 
+@media (max-width: 1920px){
+    #home .about-us, #home #news-section, #home #featured-portfolio{
+        width: 80vw;
+    }
+}
+
 @media (max-width: 1440px){
     #seven-women-banner{
         padding-top: 0;

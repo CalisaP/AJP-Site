@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Like Dreaming, Backwards</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script type="text/javascript" src="script.js"></script>
+
 </head>
 <body>
     <header id="top">
@@ -17,34 +20,53 @@
             </a>
             </figure>
             <nav>
-                <ul>
-                    <li id="home">
-                        <a href="index.html">Home</a>
+                <ul class="navbar">
+                    <li>
+                        <a class="home-link" href="index.html" class="nav-selected">Home</a>
                     </li>
-                    <li id="about">
-                        <a href="about.html">About Us
+                    <li>
+                        <a class="about-link" href="about.html">About Us
                         </a>
                     </li>
-                    <li id="news">
-                        <a href="news.html">News</a>
+                    <li>
+                        <a class="news-link" href="news.html">News</a>
                     </li>
-                    <li id="portfolio">
-                        <a href="portfolio.html" class="nav-selected">Portfolio</a>
+                    <li >
+                        <a class="portfolio-link" href="portfolio.html">Portfolio</a>
                     </li>
-                    <li id="contact">
-                        <a href="contact.html">Contact Us</a>
+                    <li >
+                        <a class="contact-link" href="contact.html">Contact Us</a>
                     </li>
                 </ul>
-            </nav>
+                <ul class="menu">
+                    <li>
+                        <a class="home-link menuItem" href="index.html" class="nav-selected">Home</a>
+                    </li>
+                    <li>
+                        <a class="about-link menuItem" href="about.html">About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a class="news-link menuItem" href="news.html">News</a>
+                    </li>
+                    <li >
+                        <a class="portfolio-link menuItem" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li >
+                        <a class="contact-link menuItem" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <button class="hamburger">
+                    <i class="menuIcon material-icons">menu</i>
+                    <i class="closeIcon material-icons">close</i>
+                </button>            </nav>
         </div>
     </header>
 
     <main>
-        <section class="banner-section" id="like-dreaming-banner">
+        <section class="banner-section portfolio-banners" id="like-dreaming-banner">
             <a class="anchor" id="like-dreaming-banner-anchor"></a> <!-- To address offset from fixed header-->                
-            <figure >
-                <img class="img-style" src="images/portfolio/film/Like Dreaming Backwards/like-dreaming-backwards-title1.png"/>
-            </figure> 
+            <h1>Like Dreaming, Backwards</h1> 
         </section>
 
         <div class="project-page container" id="like-dreaming-page">

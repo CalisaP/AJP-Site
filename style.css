@@ -48,27 +48,27 @@ header{
     transform: translateY(1px);
     transform: translateY(1px);
 }
-nav ul{
+header .header-container nav .navbar{
     list-style: none;
     padding: 0;
     margin-top: 1em;
     text-align: center;
 }
-nav ul li{
+header .header-container nav .navbar li{
     display: inline;
     transition: 1s; /* Controls fade-in: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_fade1 */
 }
-nav ul li .nav-selected{
+header .header-container nav .navbar li .nav-selected{
     color: #f7bf25;
     text-shadow: 3px 2px 1px #f7bf259d;
 }
-nav ul li:hover{
+header .header-container nav .navbar li:hover{
     text-shadow: 3px 2px 1px #f5e0c0a8;
 }
-nav ul li:active{
+header .header-container nav .navbar li:active{
     text-shadow: 2px 2px 1px #f5e0c0a8;
 }
-nav ul li a{
+header .header-container nav .navbar li a{
     text-decoration: none;
     color: #f5e0c0;
     display: inline-block;
@@ -589,6 +589,29 @@ figcaption{
 
 
 /* Portfolio Project Pages */
+/* Banner Section */
+.portfolio-banners{
+    justify-content: center;
+
+}
+.portfolio-banners h1{
+    font-size: 4.3em;
+    color: #251b13;
+    font-weight: lighter;
+    text-shadow: 3px 2px 1px #251b139a;
+    margin-top: 0;
+    top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.portfolio-banners h2{
+    font-size: 3.0em;
+    color: #251b13;
+    font-weight: lighter;
+    text-shadow: 3px 2px 1px #251b139a;
+    margin-top: 0;
+    padding-top: 0;
+}
 /* General About Sections */
 .project-page .about{
     grid-area: about;
@@ -679,6 +702,10 @@ figcaption{
     height: 50vh;
     padding-top: 7em;
 }
+#heartbeat-banner h1{
+    color: #f5e0c0;
+    text-shadow: 3px 3px 1px #f5e0c08a;
+}
 #heartbeat-banner figure{
     width: 80%;
 }
@@ -765,6 +792,10 @@ figcaption{
     background-size: cover;
     height: 50vh;
     padding-top: 7rem;
+}
+#rock-banner h1{
+    color:#f5e0c0;
+    text-shadow: 3px 3px 1px #251b13cb;
 }
 #rock-page .about ul{
     list-style: none;
@@ -898,6 +929,9 @@ footer .bottom-row{
         margin-right: auto;
         
     }
+    .portfolio-banners h1{
+        font-size: 9em;
+    }    
 }
 
 @media (max-width: 2559px){
@@ -909,17 +943,13 @@ footer .bottom-row{
     }
 }
 
+@media (max-width: 1440px){
+    #seven-women-banner{
+        padding-top: 0;
+    }
+}
+
 @media (max-width: 1024px){
-    #merikin-page .media iframe{
-        left: 2rem;
-    }
-    #merikin-page .gallery .gallery-images figure{
-        height: 25vh;
-        margin: .5rem 0;
-    }
-    #merikin-page .gallery .gallery-images figure img{
-        object-fit: contain;
-    }
     #news-page .video-placement{ 
         position: relative;
         width: 100%;
@@ -930,6 +960,19 @@ footer .bottom-row{
         width: 90%;
         height: 90%; 
     }    
+    #merikin-page .media iframe{
+        left: 2rem;
+    }
+    #merikin-page .gallery .gallery-images figure{
+        height: 25vh;
+        margin: .5rem 0;
+    }
+    #merikin-page .gallery .gallery-images figure img{
+        object-fit: contain;
+    }
+    #seven-women-banner{
+        padding-top: 0;
+    }
 }
 @media (max-width: 910px) {
     .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
@@ -947,18 +990,82 @@ footer .bottom-row{
         font-size: 23px;
     }
 }
+
+@media (min-width: 780px){
+    header .header-container .menu{
+        display: none;
+    }
+    header .header-container .hamburger{
+        display: none;
+    }
+}
+
 @media (max-width: 780px) {
+    header{
+        background-size: cover;
+    } 
+    header .header-container #logo-small{
+        width: 70%;
+    }
+    header .header-container .navbar{
+        display: none;
+    }
+    header .header-container nav .menu{
+        /* Hamburger menu design based on: https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0 */
+        display: block;
+        position: fixed;
+        transform: translateY(-110%);
+        transition: transform 0.8s;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 50vh;
+        z-index: inherit;
+        background: url('images/backgrounds/dark\ curtain-cropped.jpg');
+        background-size: cover;
+        color: #f5e0c0;
+        list-style: none;
+        border-radius: 5px;
+        padding-top: 4rem;
+    }
+    header .header-container nav .menu li{
+        padding: 1rem;
+        margin: 1rem;
+    } 
+    header .header-container nav .menu .menuItem{
+        text-decoration: none;
+        color: #f5e0c0;  
+    }   
+    header .header-container nav .menu .home-link{
+        padding-top: 3rem;
+    }
+    header .header-container nav .showMenu{
+        transform: translate(0);
+    }    
+     
+    header .header-container nav .hamburger{
+        display: block;
+        position: fixed;
+        z-index: inherit;
+        top: 3rem;
+        right: 10rem;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: none;
+        color: #f5e0c0;
+        cursor: pointer; 
+        transition: top 1s;
+    }
+    header .header-container nav .hamburger .closeIcon{
+        display: none;
+        margin: 0;
+    }    
     main{
         margin-top: 80px;
     }
     .anchor{ /* Adjusts offset caused by fixed header placement & responsive design */
         top: -200px;
-    }
-    header{
-        background-size: cover;
-    } 
-    nav ul li a{
-        font-size: 23px;
     }
     #laugh-cry-page .trailer .iframe{
         margin-left: 1.5rem;
@@ -971,8 +1078,15 @@ footer .bottom-row{
     #home-banner{
         background-size: cover;
     }
+    .portfolio-banners h1{
+        font-size: 4em;
+        padding: 2rem;
+    }    
 }
 @media (max-width: 425px) {
+    header .header-container nav .hamburger{
+        right: 6rem;
+    }
     main{
         margin-top: 90px;
     }
@@ -1017,8 +1131,17 @@ footer .bottom-row{
     #like-dreaming-banner img{
         margin-top: 3rem;
     }
+    #laugh-cry-banner h1{
+        font-size: 3em;
+    }
+    #laugh-cry-banner h2{
+        font-size: 2em;
+    }
     #laugh-cry-page .trailer .iframe{
         margin-left: 1rem;
+    }
+    #like-dreaming-banner h1{
+        font-size: 3em;
     }
     #news-page .video-placement{ 
         position: inherit;
@@ -1026,6 +1149,9 @@ footer .bottom-row{
     #news-page .video-placement iframe{
         position: inherit;
     }   
+    #rock-banner h1{
+        font-size: 3.5em;
+    }    
     footer{
         font-size: 12px;
     }
@@ -1043,20 +1169,35 @@ footer .bottom-row{
     }
 }
 @media (max-width: 375px){
+    header .header-container nav .hamburger{
+        right: 4rem;
+    }
     nav ul{
         margin-top: .1em;
     }
     nav ul li a{
         padding: .3em .5em .1em .5em;
     }
+    #portfolio-page #film{
+        width: 90vw;
+    }
     #laugh-cry-page .trailer .iframe{
         margin-left: .5rem;
     }
+    #merikin-banner h1{
+        font-size: 3.5rem;
+    }
+    #rock-banner h1{
+        font-size: 3.0em;
+    }    
     footer .top-row .right .first{
         margin-top: 0;
     }
 }
 @media (max-width: 320px){
+    header .header-container nav .hamburger{
+        right: 5rem;
+    }
     .container{
         margin: 1rem 0;
     }
@@ -1085,6 +1226,9 @@ footer .bottom-row{
     #about-page #director p{
          padding: 0 1rem;
      }
+     #rock-banner h1{
+        font-size: 2.6em;
+    }    
     footer .top-row .left p:nth-of-type(1){
         padding-left: 4.5rem;
     }

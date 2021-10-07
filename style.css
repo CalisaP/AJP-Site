@@ -32,7 +32,7 @@ header{
     height: auto; 
     overflow: hidden; /* Hides any overflow of child elements */
 }
-.header-container #logo{ 
+.header-container .logo{ 
     /* responsive sizing */
     max-width: 100%;
     height: auto;
@@ -40,11 +40,11 @@ header{
     /* For the zoom effect */
     transition: transform .5s ease;
 }
-.header-container #logo:hover{
+.header-container .logo:hover{
     /* For the zoom effect */
     transform: scale(1.05);
 }
-.header-container #logo:active{
+.header-container .logo:active{
     transform: translateY(1px);
     transform: translateY(1px);
 }
@@ -119,6 +119,7 @@ nav ul li a{
     [button-start] "button" auto [button-end] / .80fr;
 }
 
+/* General styling */
 .anchor{ /* addresses offset caused by fixed header placement */
     position: relative;
     top: -210px;
@@ -135,7 +136,6 @@ h1, h2{
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif; 
 }
 h3{
-    font-style: italic;
     text-align: center;
 }
 .red{
@@ -827,12 +827,76 @@ footer .bottom-row{
 
 
 /* Responsive Design */
-@media (max-width: 2672px) {
+@media (max-width: 2672px){
     header{
         background-size: contain; 
     }    
     #home-banner{
         background-size: contain;
+    }
+}
+
+@media (max-width: 2560px){
+    header .header-container{
+        width: 1800px;
+    }
+    header .header-container #logo-small{
+        display: none;
+    }
+    header .header-container nav li{
+        padding-left: 1.8rem;
+    }
+    header .header-container nav ul li a{
+        font-size: 1.8em;
+    }
+    .button{
+        font-size: 1.4em;
+    }
+    h2{
+        font-size: 2.5em;
+        font-weight: lighter;
+
+    }
+    h3{
+        font-size: 1.8em;
+        font-weight: lighter;
+    }
+    p, li, figcaption{
+        font-size: 1.4em;
+    }
+    .banner-section .banner-img:hover{
+        transform: scale(1.7);
+    }
+    footer .top-row .left p:nth-of-type(1){
+        font-size: 22px;
+    }
+    footer .top-row .right .fourth .icon-small{
+        display: none;
+    }
+    footer .top-row .right .fourth .icon-big{
+        padding: .8rem;
+    }
+    #home .about-us h2{
+        font-size: 3em;
+        font-weight: lighter;
+    }
+    #home .about-us, #home #news-section, #home #featured-portfolio{
+        width: 80vw;
+    }
+    #about-page .about-us h2, #about-page #director h2{
+        font-size: 2.5em;
+    }
+    #news-page .news{
+        width: 70vw;
+    }
+    #news-page #news1 .video-placement{
+        padding-bottom: 2rem;
+    }
+    #news-page .news img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 }
 @media (max-width: 1024px){
@@ -906,7 +970,7 @@ footer .bottom-row{
         flex-wrap: wrap;
     }
     nav ul li a{
-        padding: .3em .5em 0 .5em;
+        padding: .3rem .5rem 0 .5rem;
     }
     .banner-section .banner-img:hover{
         /* for the zoom effect */

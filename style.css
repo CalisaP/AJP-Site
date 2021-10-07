@@ -836,7 +836,7 @@ footer .bottom-row{
     }
 }
 
-@media (max-width: 2560px){
+@media (min-width: 2560px){
     header .header-container{
         width: 1800px;
     }
@@ -899,6 +899,16 @@ footer .bottom-row{
         
     }
 }
+
+@media (max-width: 2559px){
+    header .header-container #logo-big{
+        display: none;
+    }
+    footer .top-row .right .fourth .icon-big{
+        display: none;
+    }
+}
+
 @media (max-width: 1024px){
     #merikin-page .media iframe{
         left: 2rem;
